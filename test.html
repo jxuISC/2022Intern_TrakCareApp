@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        var result = "";
+
+        function testFunction() {
+
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "Basic c3VwZXJ1c2VyOnBhc3N3b3Jk");
+            alert('a');
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders,
+                redirect: 'follow'
+            };
+
+            fetch("https://localhost/tcfhir/trakr4/Patient/DEMO/$everything?_format=json", requestOptions)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <p id="output"></p>
+
+    <button id="testButton" onclick="testFunction()">Click Me</button>
+</body>
+
+</html>

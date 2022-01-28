@@ -1,5 +1,5 @@
 {
-  "name": "trakcareapp",
+  "name": "authenetication",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,8 +10,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.2",
+    "@react-navigation/native-stack": "^6.1.0",
     "react": "17.0.2",
-    "react-native": "0.67.1"
+    "react-hook-form": "^7.22.1",
+    "react-native": "0.65.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -20,7 +25,8 @@
     "babel-jest": "^26.6.3",
     "eslint": "7.14.0",
     "jest": "^26.6.3",
-    "metro-react-native-babel-preset": "^0.66.2",
+    "metro-react-native-babel-preset": "^0.66.0",
+    "react-native-codegen": "^0.0.7",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
